@@ -1,0 +1,18 @@
+Skipping image OS validation for hb__log-report: docker inspect returned 1
+Collecting main service artifacts
+Failed to download artifact '/app/report.json' from service 'main' (best-effort)
+Traceback (most recent call last):
+  File "/Users/rajeshtummalapalli/.local/share/uv/tools/harbor/lib/python3.12/site-packages/harbor/trial/artifact_handler.py", line 330, in _download_artifact
+    await source_env.service_download_file(
+  File "/Users/rajeshtummalapalli/.local/share/uv/tools/harbor/lib/python3.12/site-packages/harbor/environments/docker/docker.py", line 721, in service_download_file
+    await self.download_file(source_path, target_path)
+  File "/Users/rajeshtummalapalli/.local/share/uv/tools/harbor/lib/python3.12/site-packages/harbor/environments/docker/docker.py", line 706, in download_file
+    await self._platform.download_file(source_path, target_path)
+  File "/Users/rajeshtummalapalli/.local/share/uv/tools/harbor/lib/python3.12/site-packages/harbor/environments/docker/docker_unix.py", line 56, in download_file
+    await self._env._run_docker_compose_command(
+  File "/Users/rajeshtummalapalli/.local/share/uv/tools/harbor/lib/python3.12/site-packages/harbor/environments/docker/docker.py", line 419, in _run_docker_compose_command
+    raise RuntimeError(
+RuntimeError: Docker compose command failed for environment log-report. Command: docker compose --project-name log-report__mp3yapj --project-directory /Users/rajeshtummalapalli/Downloads/log-report/environment -f /private/var/folders/2h/bbdfk7tn6hg4w221g4zpbtbc0000gn/T/tmpy5rlihct/log-report__mP3YAPJ-docker-compose-resources.json -f /Users/rajeshtummalapalli/.local/share/uv/tools/harbor/lib/python3.12/site-packages/harbor/environments/docker/docker-compose-build.yaml -f /private/var/folders/2h/bbdfk7tn6hg4w221g4zpbtbc0000gn/T/tmpwz9ssc5b/docker-compose-mounts.json cp main:/app/report.json jobs/2026-06-22__14-55-50/log-report__mP3YAPJ/artifacts/app/report.json. Return code: 1. Stdout:  log-report__mp3yapj-main-1 copy log-report__mp3yapj-main-1:/app/report.json to jobs/2026-06-22__14-55-50/log-report__mP3YAPJ/artifacts/app/report.json Copying
+Error response from daemon: Could not find the file /app/report.json in container 439cb50c592e5acd9fdbd27e6c151d6f62693eae42c638cacf5cd4914d1cd573
+. Stderr: None. 
+Skipping image OS validation for hb__log-report: docker inspect returned 1
